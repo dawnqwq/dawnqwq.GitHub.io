@@ -2,19 +2,20 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>JS学习之路 | Dawn的快乐老家</title>
+<title>第三章JavaScript语言基础 | Dawn的快乐老家</title>
 <link rel="shortcut icon" href="https://dawnqwq.GitHub.io//favicon.ico?v=1637677401765">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://dawnqwq.GitHub.io//styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="JS学习之路 | Dawn的快乐老家 - Atom Feed" href="https://dawnqwq.GitHub.io//atom.xml">
+<link rel="alternate" type="application/atom+xml" title="第三章JavaScript语言基础 | Dawn的快乐老家 - Atom Feed" href="https://dawnqwq.GitHub.io//atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="最近在学Js，想在前端的路上走下去。
-多夯实基础吧，别总想这想那的🤣
-看着小野老师的课，特别心动，但是没钱卖呀
-" />
+    <meta name="description" content="JS有六种基本类型，Boolean, Null, Undefined, Number, String, Symbol
+Undefined
+变量未定义会报错，定义了未初始化则为undefined
+Null
+逻辑上讲，null为一个空对象指针，..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -77,23 +78,54 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              JS学习之路
+              第三章JavaScript语言基础
             </h2>
             <div class="post-info">
               <span>
-                2021-11-04
+                2021-11-23
               </span>
               <span>
-                1 min read
+                2 min read
               </span>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>最近在学Js，想在前端的路上走下去。<br>
-多夯实基础吧，别总想这想那的🤣<br>
-看着小野老师的课，特别心动，但是没钱卖呀</p>
+                <p>JS有六种基本类型，Boolean, Null, Undefined, Number, String, Symbol</p>
+<p>Undefined<br>
+变量未定义会报错，定义了未初始化则为undefined</p>
+<p>Null<br>
+逻辑上讲，null为一个空对象指针，所以typeof null返回object</p>
+<p>Boolean<br>
+Number<br>
+0.1+0.2 ==0.3000000000...4<br>
+存在一个NaN（非数类型）<br>
+NaN涉及的操纵返回NaN<br>
+NaN参与的逻辑运算都返回false<br>
+数值转换 Number(), parseInt(), parseFloat()<br>
+通常使用parseInt()</p>
+<p>Object 复杂数据类型<br>
+位操作符<br>
+按位非~ 取反减一<br>
+按位与 &amp;<br>
+按位或 |<br>
+左移运算符&lt;&lt;n 二进制往左移动n位<br>
+右移运算符&gt;&gt;n 二进制往右移动n位<br>
+（无符号）&lt;&lt;&lt; &gt;&gt;&gt;</p>
+<p>逻辑运算符 &amp;&amp; ||<br>
+将两项都转换为Boolean类型来计算<br>
+&amp;&amp;若第一项为false，则返回第一项，<br>
+若第一项为true，则返回第二项</p>
+<p>等于和全等于<br>
+分别为== 和===<br>
+如果使用==，则两个操作数先进行强制类型转换（都转换为Number类型），再去比较是否相等。<br>
+如果使用全等===，则不进行强制类型转换</p>
+<p>逗号运算符<br>
+返回其最后一个值</p>
+<p>注意点<br>
+逻辑运算符是强制转换为Boolean类型在进行操作<br>
+比较运算，等于运算是强制转化为Number类型进行计算。</p>
 
               </div>
               <div class="toc-container">
@@ -103,6 +135,15 @@
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://dawnqwq.GitHub.io/post/ren-jian-qing-xing-liu-huo-huo/">
+              <h3 class="post-title">
+                禁止内耗 人间清醒
+              </h3>
+            </a>
+          </div>
         
 
         
