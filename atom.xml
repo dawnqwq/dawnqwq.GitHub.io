@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dawnqwq.GitHub.io/</id>
     <title>Dawn的快乐老家</title>
-    <updated>2021-11-03T01:27:07.722Z</updated>
+    <updated>2021-11-23T13:44:40.273Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dawnqwq.GitHub.io/"/>
     <link rel="self" href="https://dawnqwq.GitHub.io/atom.xml"/>
@@ -10,6 +10,103 @@
     <logo>https://dawnqwq.GitHub.io/images/avatar.png</logo>
     <icon>https://dawnqwq.GitHub.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Dawn的快乐老家</rights>
+    <entry>
+        <title type="html"><![CDATA[2021.11.23 JavaScript类型转换思想]]></title>
+        <id>https://dawnqwq.GitHub.io/post/20211123-javascript-lei-xing-zhuan-huan-si-xiang/</id>
+        <link href="https://dawnqwq.GitHub.io/post/20211123-javascript-lei-xing-zhuan-huan-si-xiang/">
+        </link>
+        <updated>2021-11-23T13:22:33.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="第三章javascript语言基础">第三章JavaScript语言基础</h2>
+<p>JS有六种基本类型，Boolean, Null, Undefined, Number, String, Symbol</p>
+<h2 id="undefined">Undefined</h2>
+<p>变量未定义会报错，定义了未初始化则为undefined</p>
+<h2 id="null">Null</h2>
+<p>逻辑上讲，null为一个空对象指针，所以typeof null返回object</p>
+<h2 id="boolean">Boolean</h2>
+<h2 id="number">Number</h2>
+<p>0.1+0.2 ==0.3000000000...4<br>
+存在一个NaN（非数类型）<br>
+NaN涉及的操纵返回NaN<br>
+NaN参与的逻辑运算都返回false<br>
+数值转换 Number(), parseInt(), parseFloat()<br>
+通常使用parseInt()</p>
+<h2 id="object-复杂数据类型">Object 复杂数据类型</h2>
+<h2 id="位操作符">位操作符</h2>
+<p>按位非~     取反减一<br>
+按位与 &amp;<br>
+按位或 |<br>
+左移运算符&lt;&lt;n 二进制往左移动n位<br>
+右移运算符&gt;&gt;n 二进制往右移动n位<br>
+（无符号）&lt;&lt;&lt;   &gt;&gt;&gt;</p>
+<h2 id="逻辑运算符">逻辑运算符 &amp;&amp; ||</h2>
+<p>将两项都转换为Boolean类型来计算<br>
+&amp;&amp;若第一项为false，则返回第一项，<br>
+若第一项为true，则返回第二项</p>
+<h2 id="等于和全等于">等于和全等于</h2>
+<p>分别为==    和===<br>
+如果使用==，则两个操作数先进行强制类型转换（都转换为Number类型），再去比较是否相等。<br>
+如果使用全等===，则不进行强制类型转换</p>
+<h2 id="逗号运算符">逗号运算符</h2>
+<p>返回其最后一个值</p>
+<h2 id="注意点">注意点</h2>
+<p>逻辑运算符是强制转换为Boolean类型在进行操作<br>
+比较运算，等于运算是强制转化为Number类型进行计算。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2021.11.23]]></title>
+        <id>https://dawnqwq.GitHub.io/post/20211123/</id>
+        <link href="https://dawnqwq.GitHub.io/post/20211123/">
+        </link>
+        <updated>2021-11-23T13:22:33.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="第三章javascript语言基础">第三章JavaScript语言基础</h2>
+<p>JS有六种基本类型，Boolean, Null, Undefined, Number, String, Symbol</p>
+<h2 id="undefined">Undefined</h2>
+<p>变量未定义会报错，定义了未初始化则为undefined</p>
+<h2 id="null">Null</h2>
+<p>逻辑上讲，null为一个空对象指针，所以typeof null返回object</p>
+<h2 id="boolean">Boolean</h2>
+<h2 id="number">Number</h2>
+<p>0.1+0.2 ==0.3000000000...4<br>
+存在一个NaN（非数类型）<br>
+NaN涉及的操纵返回NaN<br>
+NaN参与的逻辑运算都返回false<br>
+数值转换 Number(), parseInt(), parseFloat()<br>
+通常使用parseInt()</p>
+<h2 id="object-复杂数据类型">Object 复杂数据类型</h2>
+<h2 id="位操作符">位操作符</h2>
+<p>按位非~     取反减一<br>
+按位与 &amp;<br>
+按位或 |<br>
+左移运算符&lt;&lt;n 二进制往左移动n位<br>
+右移运算符&gt;&gt;n 二进制往右移动n位<br>
+（无符号）&lt;&lt;&lt;   &gt;&gt;&gt;</p>
+<h2 id="逻辑运算符">逻辑运算符 &amp;&amp; ||</h2>
+<p>将两项都转换为Boolean类型来计算<br>
+&amp;&amp;若第一项为false，则返回第一项，<br>
+若第一项为true，则返回第二项</p>
+<h2 id="等于和全等于">等于和全等于</h2>
+<p>分别为==    和===<br>
+如果使用==，则两个操作数先进行强制类型转换（都转换为Number类型），再去比较是否相等。<br>
+如果使用全等===，则不进行强制类型转换</p>
+<h2 id="逗号运算符">逗号运算符</h2>
+<p>返回其最后一个值</p>
+<h2 id="注意点">注意点</h2>
+<p>逻辑运算符是强制转换为Boolean类型在进行操作<br>
+比较运算，等于运算是强制转化为Number类型进行计算。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[JS学习之路]]></title>
+        <id>https://dawnqwq.GitHub.io/post/js-xue-xi-zhi-lu/</id>
+        <link href="https://dawnqwq.GitHub.io/post/js-xue-xi-zhi-lu/">
+        </link>
+        <updated>2021-11-04T15:38:32.000Z</updated>
+        <content type="html"><![CDATA[<p>最近在学Js，想在前端的路上走下去。<br>
+多夯实基础吧，别总想这想那的🤣<br>
+看着小野老师的课，特别心动，但是没钱卖呀</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[禁止内耗 人间清醒]]></title>
         <id>https://dawnqwq.GitHub.io/post/ren-jian-qing-xing-liu-huo-huo/</id>

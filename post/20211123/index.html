@@ -2,17 +2,21 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>禁止内耗 人间清醒 | Dawn的快乐老家</title>
+<title>2021.11.23 | Dawn的快乐老家</title>
 <link rel="shortcut icon" href="https://dawnqwq.GitHub.io//favicon.ico?v=1637675051127">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://dawnqwq.GitHub.io//styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="禁止内耗 人间清醒 | Dawn的快乐老家 - Atom Feed" href="https://dawnqwq.GitHub.io//atom.xml">
+<link rel="alternate" type="application/atom+xml" title="2021.11.23 | Dawn的快乐老家 - Atom Feed" href="https://dawnqwq.GitHub.io//atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="每次上专业外语，刘火火都会讲一些道理，或者说是经验吧。今天听黄金城说他人间清醒，才发现这个词很贴切。
-今天课堂印象最深的一句话。只要你想明白了，做什么都是对的；想不明白，做什么都是错的。像三体章北海他爹说的：“要多想”。我说理解的想不应该是..." />
+    <meta name="description" content="第三章JavaScript语言基础
+JS有六种基本类型，Boolean, Null, Undefined, Number, String, Symbol
+Undefined
+变量未定义会报错，定义了未初始化则为undefined
+Null
+..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -75,11 +79,11 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              禁止内耗 人间清醒
+              2021.11.23
             </h2>
             <div class="post-info">
               <span>
-                2021-11-02
+                2021-11-23
               </span>
               <span>
                 2 min read
@@ -87,27 +91,78 @@
               
             </div>
             
-              <img class="post-feature-image" src="https://dawnqwq.GitHub.io//post-images/ren-jian-qing-xing-liu-huo-huo.jpg" alt="">
-            
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>每次上专业外语，刘火火都会讲一些道理，或者说是经验吧。今天听黄金城说他人间清醒，才发现这个词很贴切。<br>
-今天课堂印象最深的一句话。只要你想明白了，做什么都是对的；想不明白，做什么都是错的。像三体章北海他爹说的：“要多想”。我说理解的想不应该是那种浮于表面，走马观花似的想，而是你越害怕什么，你就越要想什么，想怎么样抽丝剥茧的解决它。<br>
-好像跑题了，应该是讨论我们为什么要去做一件事。我现在在写我的第一篇博客，为什么去做这件事，可能是要去锻炼我的文笔？亦或去给一天做一个总结？留住生活中难忘的瞬间不让他被遗忘？我好像还没有想明白。脑海中一直有一个声音，当我在准备做一件事情的时候，他就会出现，问做这件事情好不好，到底要不要做他，如果产生各种坏结果要怎么办，这种思想斗争每天都会在我脑海里发生。现在我找寻到了一些方法，做事情是需要沉淀的，你不能指望今日播种，明日收获，习主席说过一句话，具体我忘了，我感觉说的太对了，也是类似这意思。所以有些事情，大体方向对了，就去做，要多思考，但不要想对或者不对，当你选择做了，这件事就已经是对的了。<br>
-自己还是有些浮躁，有些急于求成，归根结底还是会在意别人的眼光，拿自己跟别人比，一比就恐慌，不比就没动力。<br>
-前两天学了个词叫内耗，就是内心os过多，才知道学名这么叫，我发现我还挺严重，早就想改改了。<br>
-👻从我做起,拒绝内耗。<br>
-会一步一步踏踏实实的朝着目标前进的。<br>
-困了，看会js就睡觉</p>
+                <h2 id="第三章javascript语言基础">第三章JavaScript语言基础</h2>
+<p>JS有六种基本类型，Boolean, Null, Undefined, Number, String, Symbol</p>
+<h2 id="undefined">Undefined</h2>
+<p>变量未定义会报错，定义了未初始化则为undefined</p>
+<h2 id="null">Null</h2>
+<p>逻辑上讲，null为一个空对象指针，所以typeof null返回object</p>
+<h2 id="boolean">Boolean</h2>
+<h2 id="number">Number</h2>
+<p>0.1+0.2 ==0.3000000000...4<br>
+存在一个NaN（非数类型）<br>
+NaN涉及的操纵返回NaN<br>
+NaN参与的逻辑运算都返回false<br>
+数值转换 Number(), parseInt(), parseFloat()<br>
+通常使用parseInt()</p>
+<h2 id="object-复杂数据类型">Object 复杂数据类型</h2>
+<h2 id="位操作符">位操作符</h2>
+<p>按位非~     取反减一<br>
+按位与 &amp;<br>
+按位或 |<br>
+左移运算符&lt;&lt;n 二进制往左移动n位<br>
+右移运算符&gt;&gt;n 二进制往右移动n位<br>
+（无符号）&lt;&lt;&lt;   &gt;&gt;&gt;</p>
+<h2 id="逻辑运算符">逻辑运算符 &amp;&amp; ||</h2>
+<p>将两项都转换为Boolean类型来计算<br>
+&amp;&amp;若第一项为false，则返回第一项，<br>
+若第一项为true，则返回第二项</p>
+<h2 id="等于和全等于">等于和全等于</h2>
+<p>分别为==    和===<br>
+如果使用==，则两个操作数先进行强制类型转换（都转换为Number类型），再去比较是否相等。<br>
+如果使用全等===，则不进行强制类型转换</p>
+<h2 id="逗号运算符">逗号运算符</h2>
+<p>返回其最后一个值</p>
+<h2 id="注意点">注意点</h2>
+<p>逻辑运算符是强制转换为Boolean类型在进行操作<br>
+比较运算，等于运算是强制转化为Number类型进行计算。</p>
 
               </div>
               <div class="toc-container">
-                
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E7%AC%AC%E4%B8%89%E7%AB%A0javascript%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80">第三章JavaScript语言基础</a></li>
+<li><a href="#undefined">Undefined</a></li>
+<li><a href="#null">Null</a></li>
+<li><a href="#boolean">Boolean</a></li>
+<li><a href="#number">Number</a></li>
+<li><a href="#object-%E5%A4%8D%E6%9D%82%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">Object 复杂数据类型</a></li>
+<li><a href="#%E4%BD%8D%E6%93%8D%E4%BD%9C%E7%AC%A6">位操作符</a></li>
+<li><a href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6">逻辑运算符 &amp;&amp; ||</a></li>
+<li><a href="#%E7%AD%89%E4%BA%8E%E5%92%8C%E5%85%A8%E7%AD%89%E4%BA%8E">等于和全等于</a></li>
+<li><a href="#%E9%80%97%E5%8F%B7%E8%BF%90%E7%AE%97%E7%AC%A6">逗号运算符</a></li>
+<li><a href="#%E6%B3%A8%E6%84%8F%E7%82%B9">注意点</a></li>
+</ul>
+</li>
+</ul>
+
               </div>
             </div>
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://dawnqwq.GitHub.io/post/js-xue-xi-zhi-lu/">
+              <h3 class="post-title">
+                JS学习之路
+              </h3>
+            </a>
+          </div>
         
 
         
