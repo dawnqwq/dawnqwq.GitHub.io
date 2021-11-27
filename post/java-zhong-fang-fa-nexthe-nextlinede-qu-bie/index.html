@@ -2,26 +2,19 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>关于 | Dawn的快乐老家</title>
+<title>Java中方法next()和nextLine()的区别 | Dawn的快乐老家</title>
 <link rel="shortcut icon" href="https://dawnqwq.GitHub.io//favicon.ico?v=1638008788347">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://dawnqwq.GitHub.io//styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="关于 | Dawn的快乐老家 - Atom Feed" href="https://dawnqwq.GitHub.io//atom.xml">
+<link rel="alternate" type="application/atom+xml" title="Java中方法next()和nextLine()的区别 | Dawn的快乐老家 - Atom Feed" href="https://dawnqwq.GitHub.io//atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="
-😅😅😅😅😅😅欢迎欢迎😅😅😅😅😅😅
-🤝🤝🤝🤝🤝🤝🤝🤝🤝🤝🤝🤝🤝🤝🤝
+    <meta name="description" content="Java中Scanner类中的方法next()和nextLine()都是吸取输入台输入的字符，区别：
 
-🏠 关于本站
-吐槽空间站
-
-👨‍💻 博主是谁
-dawn是大帅哥，普普通通计科内卷大学生👨‍💻👩‍💻
-
-..." />
+next()不会吸取字符前/后的空格/Tab键，只吸取字符，开始吸取字符（字符前后不算）直到遇到空格/Tab键/回车截止吸取；
+next..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -84,11 +77,11 @@ dawn是大帅哥，普普通通计科内卷大学生👨‍💻👩‍💻
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              关于
+              Java中方法next()和nextLine()的区别
             </h2>
             <div class="post-info">
               <span>
-                2019-01-25
+                2021-11-27
               </span>
               <span>
                 1 min read
@@ -98,31 +91,22 @@ dawn是大帅哥，普普通通计科内卷大学生👨‍💻👩‍💻
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <blockquote>
-<p>😅😅😅😅😅😅欢迎欢迎😅😅😅😅😅😅<br>
-🤝🤝🤝🤝🤝🤝🤝🤝🤝🤝🤝🤝🤝🤝🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<pre><code>吐槽空间站
-</code></pre>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<pre><code>dawn是大帅哥，普普通通计科内卷大学生👨‍💻👩‍💻
-</code></pre>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<pre><code>听音乐，加菲猫，篮球也行
-</code></pre>
-<h2 id="联系我呀">📬 联系我呀</h2>
-<pre><code>HSGarfield</code></pre>
+                <p><strong>Java中Scanner类中的方法next()和nextLine()都是吸取输入台输入的字符，区别：</strong></p>
+<ul>
+<li><strong>next()不会吸取字符前/后的空格/Tab键，只吸取字符，开始吸取字符（字符前后不算）直到遇到空格/Tab键/回车截止吸取；</strong></li>
+<li><strong>nextLine()吸取字符前后的空格/Tab键，回车键截止。</strong></li>
+</ul>
+<h2 id="next和nextline一起用时的注意点">next()和nextLine()一起用时的注意点</h2>
+<p>nextLine()会把nextInt()，next()，nextDouble()，nextFloat()的结束换行符作为字符串读入，进而不需要从键盘输入字符串nextLine便已经转向了下一条语句执行。<br>
+解决办法：<br>
+在每一个nextInt()，next()，nextDouble()，nextFloat()后都加一个nextLine()语句，将它们的结束换行符过滤。</p>
 
               </div>
               <div class="toc-container">
                 <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99">🏠 关于本站</a></li>
-<li><a href="#%E5%8D%9A%E4%B8%BB%E6%98%AF%E8%B0%81">👨‍💻 博主是谁</a></li>
-<li><a href="#%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD">⛹ 兴趣爱好</a></li>
-<li><a href="#%E8%81%94%E7%B3%BB%E6%88%91%E5%91%80">📬 联系我呀</a></li>
+<li><a href="#next%E5%92%8Cnextline%E4%B8%80%E8%B5%B7%E7%94%A8%E6%97%B6%E7%9A%84%E6%B3%A8%E6%84%8F%E7%82%B9">next()和nextLine()一起用时的注意点</a></li>
 </ul>
 </li>
 </ul>
@@ -132,6 +116,15 @@ dawn是大帅哥，普普通通计科内卷大学生👨‍💻👩‍💻
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://dawnqwq.GitHub.io/post/integer-zhong-parseinthe-valueofde-qu-bie/">
+              <h3 class="post-title">
+                Integer中parseInt()和valueOf()的区别？
+              </h3>
+            </a>
+          </div>
         
 
         

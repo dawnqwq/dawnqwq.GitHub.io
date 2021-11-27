@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dawnqwq.GitHub.io/</id>
     <title>Dawn的快乐老家</title>
-    <updated>2021-11-23T14:47:25.050Z</updated>
+    <updated>2021-11-27T10:26:33.244Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dawnqwq.GitHub.io/"/>
     <link rel="self" href="https://dawnqwq.GitHub.io/atom.xml"/>
@@ -10,6 +10,129 @@
     <logo>https://dawnqwq.GitHub.io/images/avatar.png</logo>
     <icon>https://dawnqwq.GitHub.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Dawn的快乐老家</rights>
+    <entry>
+        <title type="html"><![CDATA[Java中方法next()和nextLine()的区别]]></title>
+        <id>https://dawnqwq.GitHub.io/post/java-zhong-fang-fa-nexthe-nextlinede-qu-bie/</id>
+        <link href="https://dawnqwq.GitHub.io/post/java-zhong-fang-fa-nexthe-nextlinede-qu-bie/">
+        </link>
+        <updated>2021-11-27T10:25:50.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>Java中Scanner类中的方法next()和nextLine()都是吸取输入台输入的字符，区别：</strong></p>
+<ul>
+<li><strong>next()不会吸取字符前/后的空格/Tab键，只吸取字符，开始吸取字符（字符前后不算）直到遇到空格/Tab键/回车截止吸取；</strong></li>
+<li><strong>nextLine()吸取字符前后的空格/Tab键，回车键截止。</strong></li>
+</ul>
+<h2 id="next和nextline一起用时的注意点">next()和nextLine()一起用时的注意点</h2>
+<p>nextLine()会把nextInt()，next()，nextDouble()，nextFloat()的结束换行符作为字符串读入，进而不需要从键盘输入字符串nextLine便已经转向了下一条语句执行。<br>
+解决办法：<br>
+在每一个nextInt()，next()，nextDouble()，nextFloat()后都加一个nextLine()语句，将它们的结束换行符过滤。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Integer中parseInt()和valueOf()的区别？]]></title>
+        <id>https://dawnqwq.GitHub.io/post/integer-zhong-parseinthe-valueofde-qu-bie/</id>
+        <link href="https://dawnqwq.GitHub.io/post/integer-zhong-parseinthe-valueofde-qu-bie/">
+        </link>
+        <updated>2021-11-27T10:24:08.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li>
+<ul>
+<li>
+<table>
+<thead>
+<tr>
+<th><code>static int</code></th>
+<th><code>parseInt(String s)</code>  将字符串参数解析为带符号的十进制整数。</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>static int</code></td>
+<td><code>parseInt(String s, int radix)</code>  将字符串参数解析为第二个参数指定的基数中的有符号整数。</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>
+<table>
+<thead>
+<tr>
+<th><code>static Integer</code></th>
+<th><code>valueOf(String s)</code>  返回一个 <code>Integer</code>对象，保存指定的值为 <code>String</code> 。</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>static Integer</code></td>
+<td><code>valueOf(String s, int radix)</code>  返回一个 <code>Integer</code>对象，保存从指定的String中  <code>String</code>的值，当用第二个参数给出的基数进行解析时。</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+<p>我们看parseInt()这个方法是如何实现的</p>
+<pre><code>public static int parseInt(String s) throws NumberFormatException {
+        return parseInt(s,10);
+    }
+</code></pre>
+<p>我们再看valueOf()是如何实现的：</p>
+<pre><code>public static Integer valueOf(String s) throws NumberFormatException {
+        return Integer.valueOf(parseInt(s, 10));
+    }
+</code></pre>
+<p><code>valueOf(String s)</code>方法调用了<code>parseInt(String s, int radix)</code>方法，而<code>parseInt(String s, int radix)</code>方法返回值是一个int类型的值，之后又调用了<code>valueOf(int i)</code>方法将int进行了装箱返回包装类型Integer。</p>
+<p>所以如果你不需要返回包装类型，可以直接调用<code>parseInt(String s)</code>方法，效率更高。</p>
+<hr>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2021.11.23 第三章JavaScript语言基础]]></title>
+        <id>https://dawnqwq.GitHub.io/post/di-san-zhang-javascript-yu-yan-ji-chu/</id>
+        <link href="https://dawnqwq.GitHub.io/post/di-san-zhang-javascript-yu-yan-ji-chu/">
+        </link>
+        <updated>2021-11-23T13:51:20.000Z</updated>
+        <content type="html"><![CDATA[<p>JS有六种基本类型，Boolean, Null, Undefined, Number, String, Symbol</p>
+<p>Undefined<br>
+变量未定义会报错，定义了未初始化则为undefined</p>
+<p>Null<br>
+逻辑上讲，null为一个空对象指针，所以typeof null返回object</p>
+<p>Boolean<br>
+Number<br>
+0.1+0.2 ==0.3000000000...4<br>
+存在一个NaN（非数类型）<br>
+NaN涉及的操纵返回NaN<br>
+NaN参与的逻辑运算都返回false<br>
+数值转换 Number(), parseInt(), parseFloat()<br>
+通常使用parseInt()</p>
+<p>Object 复杂数据类型<br>
+位操作符<br>
+按位非~ 取反减一<br>
+按位与 &amp;<br>
+按位或 |<br>
+左移运算符&lt;&lt;n 二进制往左移动n位<br>
+右移运算符&gt;&gt;n 二进制往右移动n位<br>
+（无符号）&lt;&lt;&lt; &gt;&gt;&gt;</p>
+<p>逻辑运算符 &amp;&amp; ||<br>
+将两项都转换为Boolean类型来计算<br>
+&amp;&amp;若第一项为false，则返回第一项，<br>
+若第一项为true，则返回第二项</p>
+<p>等于和全等于<br>
+分别为== 和===<br>
+如果使用==，则两个操作数先进行强制类型转换（都转换为Number类型），再去比较是否相等。<br>
+如果使用全等===，则不进行强制类型转换</p>
+<p>逗号运算符<br>
+返回其最后一个值</p>
+<p>注意点<br>
+逻辑运算符是强制转换为Boolean类型在进行操作<br>
+比较运算，等于运算是强制转化为Number类型进行计算。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[禁止内耗 人间清醒]]></title>
         <id>https://dawnqwq.GitHub.io/post/ren-jian-qing-xing-liu-huo-huo/</id>
