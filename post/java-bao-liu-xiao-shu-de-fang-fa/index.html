@@ -2,30 +2,21 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Integer中parseInt()和valueOf()的区别？ | Dawn的快乐老家</title>
+<title>Java保留小数的方法 | Dawn的快乐老家</title>
 <link rel="shortcut icon" href="https://dawnqwq.GitHub.io//favicon.ico?v=1638181850724">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://dawnqwq.GitHub.io//styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Integer中parseInt()和valueOf()的区别？ | Dawn的快乐老家 - Atom Feed" href="https://dawnqwq.GitHub.io//atom.xml">
+<link rel="alternate" type="application/atom+xml" title="Java保留小数的方法 | Dawn的快乐老家 - Atom Feed" href="https://dawnqwq.GitHub.io//atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="
+    <meta name="description" content="方法一：String的format方法（推荐）
+double f = 111231.5585;
 
+System.out.println(String.format(&quot;%.2f&quot;, f));
 
-
-
-
-
-static int
-parseInt(String s)  将字符串参数解析为带符号的十进制整数。
-
-
-
-
-static int
-parseInt(String s, int radix)  将字符串参数解析为第二个参数指定..." />
+方法二：DecimalFor..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -88,76 +79,33 @@ parseInt(String s, int radix)  将字符串参数解析为第二个参数指定.
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              Integer中parseInt()和valueOf()的区别？
+              Java保留小数的方法
             </h2>
             <div class="post-info">
               <span>
-                2021-11-27
+                2021-11-29
               </span>
               <span>
-                2 min read
+                1 min read
               </span>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <ul>
-<li>
-<ul>
-<li>
-<table>
-<thead>
-<tr>
-<th><code>static int</code></th>
-<th><code>parseInt(String s)</code>  将字符串参数解析为带符号的十进制整数。</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>static int</code></td>
-<td><code>parseInt(String s, int radix)</code>  将字符串参数解析为第二个参数指定的基数中的有符号整数。</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>
-<table>
-<thead>
-<tr>
-<th><code>static Integer</code></th>
-<th><code>valueOf(String s)</code>  返回一个 <code>Integer</code>对象，保存指定的值为 <code>String</code> 。</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>static Integer</code></td>
-<td><code>valueOf(String s, int radix)</code>  返回一个 <code>Integer</code>对象，保存从指定的String中  <code>String</code>的值，当用第二个参数给出的基数进行解析时。</td>
-</tr>
-</tbody>
-</table>
-</li>
-</ul>
-</li>
-</ul>
-<p>我们看parseInt()这个方法是如何实现的</p>
-<pre><code>public static int parseInt(String s) throws NumberFormatException {
-        return parseInt(s,10);
-    }
+                <p>方法一：String的format方法（推荐）</p>
+<pre><code>double f = 111231.5585;
+
+System.out.println(String.format(&quot;%.2f&quot;, f));
 </code></pre>
-<p>我们再看valueOf()是如何实现的：</p>
-<pre><code>public static Integer valueOf(String s) throws NumberFormatException {
-        return Integer.valueOf(parseInt(s, 10));
-    }
+<p>方法二：DecimalFormat的format方法</p>
+<pre><code>import java.text.DecimalFormat;
+
+double f = 111231.5585;
+
+DecimalFormat df = new DecimalFormat(&quot;#.00&quot;);
+System.out.println(df.format(f));
 </code></pre>
-<p><code>valueOf(String s)</code>方法调用了<code>parseInt(String s, int radix)</code>方法，而<code>parseInt(String s, int radix)</code>方法返回值是一个int类型的值，之后又调用了<code>valueOf(int i)</code>方法将int进行了装箱返回包装类型Integer。</p>
-<p>所以如果你不需要返回包装类型，可以直接调用<code>parseInt(String s)</code>方法，效率更高。</p>
-<hr>
 
               </div>
               <div class="toc-container">
@@ -170,9 +118,9 @@ parseInt(String s, int radix)  将字符串参数解析为第二个参数指定.
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://dawnqwq.GitHub.io/post/di-san-zhang-javascript-yu-yan-ji-chu/">
+            <a href="https://dawnqwq.GitHub.io/post/java-zhong-fang-fa-nexthe-nextlinede-qu-bie/">
               <h3 class="post-title">
-                2021.11.23 第三章JavaScript语言基础
+                Java中方法next()和nextLine()的区别
               </h3>
             </a>
           </div>

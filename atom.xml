@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dawnqwq.GitHub.io/</id>
     <title>Dawn的快乐老家</title>
-    <updated>2021-11-27T12:52:37.820Z</updated>
+    <updated>2021-11-29T10:31:00.566Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dawnqwq.GitHub.io/"/>
     <link rel="self" href="https://dawnqwq.GitHub.io/atom.xml"/>
@@ -10,6 +10,27 @@
     <logo>https://dawnqwq.GitHub.io/images/avatar.png</logo>
     <icon>https://dawnqwq.GitHub.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Dawn的快乐老家</rights>
+    <entry>
+        <title type="html"><![CDATA[Java保留小数的方法]]></title>
+        <id>https://dawnqwq.GitHub.io/post/java-bao-liu-xiao-shu-de-fang-fa/</id>
+        <link href="https://dawnqwq.GitHub.io/post/java-bao-liu-xiao-shu-de-fang-fa/">
+        </link>
+        <updated>2021-11-29T10:29:03.000Z</updated>
+        <content type="html"><![CDATA[<p>方法一：String的format方法（推荐）</p>
+<pre><code>double f = 111231.5585;
+
+System.out.println(String.format(&quot;%.2f&quot;, f));
+</code></pre>
+<p>方法二：DecimalFormat的format方法</p>
+<pre><code>import java.text.DecimalFormat;
+
+double f = 111231.5585;
+
+DecimalFormat df = new DecimalFormat(&quot;#.00&quot;);
+System.out.println(df.format(f));
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Java中方法next()和nextLine()的区别]]></title>
         <id>https://dawnqwq.GitHub.io/post/java-zhong-fang-fa-nexthe-nextlinede-qu-bie/</id>
