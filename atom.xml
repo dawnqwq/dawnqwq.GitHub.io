@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dawnqwq.GitHub.io/</id>
     <title>Dawn的快乐老家</title>
-    <updated>2021-11-29T10:31:00.566Z</updated>
+    <updated>2021-12-07T09:11:16.613Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dawnqwq.GitHub.io/"/>
     <link rel="self" href="https://dawnqwq.GitHub.io/atom.xml"/>
@@ -10,6 +10,85 @@
     <logo>https://dawnqwq.GitHub.io/images/avatar.png</logo>
     <icon>https://dawnqwq.GitHub.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Dawn的快乐老家</rights>
+    <entry>
+        <title type="html"><![CDATA[怎么理解JS函数参数是按值传递]]></title>
+        <id>https://dawnqwq.GitHub.io/post/zen-me-li-jie-js-han-shu-can-shu-shi-an-zhi-chuan-di/</id>
+        <link href="https://dawnqwq.GitHub.io/post/zen-me-li-jie-js-han-shu-can-shu-shi-an-zhi-chuan-di/">
+        </link>
+        <updated>2021-12-07T09:05:22.000Z</updated>
+        <content type="html"><![CDATA[<h4 id="怎么理解js函数参数是按值传递">怎么理解JS函数参数是按值传递</h4>
+<p>我们先来看一下这道题：</p>
+<pre><code class="language-javascript">var a=[1,2,3];
+function fn(b){
+	b=[4,5,6];
+}
+fn(a);
+console.log(a); //请问a 输出多少
+复制代码
+</code></pre>
+<details style="display: block;"><summary style="display: block;">查看答案</summary>[1,2,3]</details>
+<br>
+怎么样你答对了吗？
+<p>我们接下来再看一道题：</p>
+<pre><code class="language-javascript">var obj={
+	name:'大雄'
+};
+function fn(b){
+	b.name='小熊'
+}
+fn(obj);
+console.log(obj.name); // 输出多少
+复制代码
+</code></pre>
+<details style="display: block;"><summary style="display: block;">查看答案</summary>小熊</details>
+<br>
+你都答对了吗？
+<p>接下来我们详解一下为什么</p>
+<p>《Javascript 高级程序设计》第4版中有这么一句话 <strong>ECMAScript中所有函数的参数都是按值传递的</strong></p>
+<p>但是从第二道题我们明显感觉到：就是按照引用传递的啊；首先我们都知道，js 中的类型分为 值类型和引用类型，值类型保存在内存栈中，引用类型保存在内存堆中；</p>
+<p>我们看一下 下面的这段代码：</p>
+<pre><code class="language-javascript">var a={
+  name:'大雄'
+};
+var b=a;
+b.name='小熊';
+console.log(a.name);
+复制代码
+</code></pre>
+<details style="display: block;"><summary style="display: block;">查看答案</summary></details>
+<p>这段代码的执行结果想必大家都知道，因为a 保存的是一个堆指针，b赋值后指向了同一个堆内存；</p>
+<figure data-type="image" tabindex="1"><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/795cf91dcd0d46b5a6808fa0b8b89716~tplv-k3u1fbpfcp-watermark.awebp" alt="avatar" loading="lazy"></figure>
+<p>我们现在理解下：函数都是按值传递的；</p>
+<pre><code class="language-javascript">var a={};
+function fn(b){
+	b=2;
+}
+fn(a);
+//这段代码中函数的参数传递相当于如下代码
+function fn(b){
+  var b=a; // 对参数进行了复制；在栈内存在开辟了空间；
+}
+复制代码
+</code></pre>
+<p>所以说：<strong>值传递</strong> 可以理解为复制变量值，基本类型复制后俩个变量完全独立；引用类型复制的是引用（即指针），之后的任何一方改变都会映射到另一方；</p>
+<p>我相信说到这里第二道题的答案大家应该都明白了，接下来我们看一下第一道题：</p>
+<pre><code class="language-javascript">// 第一题 相当于如下的代码
+function fn(b){
+ 	var b=a; // b与a 指向了同一个堆内存；
+  	b=[4,5,6]; // 并没有改变指针的内容；而是开辟了一个新的堆空间；所以a,b 就不相互影响了； 
+};
+复制代码
+</code></pre>
+<p>我们用图说明一下：</p>
+<figure data-type="image" tabindex="2"><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2db6ae4ac3154ef986e39b8ec83b8ab5~tplv-k3u1fbpfcp-watermark.awebp" alt="avatar" loading="lazy"></figure>
+<p>结合图和代码，我们对程序的执行一目了然，相信大家都明白了。</p>
+<p>所以说js中<strong>函数的参数都是按值传递的</strong></p>
+<br>
+>> 转载于掘金社区，原文链接
+ https://juejin.cn/post/6904840968546041863?share_token=35261b3f-1346-4f34-977e-190943b4165d
+如有侵权，请联系我删除
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Java保留小数的方法]]></title>
         <id>https://dawnqwq.GitHub.io/post/java-bao-liu-xiao-shu-de-fang-fa/</id>
